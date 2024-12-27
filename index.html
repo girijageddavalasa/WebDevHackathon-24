@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboticsClub-VITC (GG version)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo1.jpeg" type="image/jpeg">
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Club Logo">
+        <nav>
+            <ul>
+                <li><a href="#projects" target="_blank">Projects</a></li>
+                <li><a href="#events" target="_blank">Events</a></li>
+                <li><a href="#abouts" target="_blank">About</a></li>
+                <li><a href="#feedback-section" target="_blank">Q/A</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <!-- Video Background -->
+        <video autoplay muted loop class="video-bg">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Text Content -->
+        <div class="intro-content">
+            <h1>Welcome To</h1>
+            <h1>RoboTicsClub-VITC</h1>
+        </div>
+    </div>
+
+    <div id="projects">
+        <h2>Our Projects</h2>
+        <div class="projects-wrapper">
+            <!-- Project 1 -->
+            <a href="https://nevonprojects.com/fishing-drone/" target="_blank" class="project">
+                <img src="fish.jpg" alt="Project 1">
+                <div class="project-details">
+                    <h3>Fishing Drone</h3>
+                    <p>This is Project 1. Click to learn more.</p>
+                </div>
+            </a>
+            
+            <!-- Project 2 -->
+            <a href="https://nevonprojects.com/360-filmmaking-drone-for-4k-hd-video-using-action-camera/" target="_blank" class="project">
+                <img src="drone.jpg" alt="Project 2">
+                <div class="project-details">
+                    <h3>360° Filmmaking Drone</h3>
+                    <p>This is Project 2. Click to learn more.</p>
+                </div>
+            </a>
+            
+            <!-- Project 3 -->
+            <a href="https://nevonprojects.com/water-landing-and-take-off-drone/" target="_blank" class="project">
+                <img src="water.jpg" alt="Project 3">
+                <div class="project-details">
+                    <h3>Water Landing and Take-off Drone</h3>
+                    <p>This is Project 3. Click to learn more.</p>
+                </div>
+            </a>
+
+            <!-- Project 4 -->
+            <a href="https://nevonprojects.com/smart-floor-cleaner-robot-using-android/" target="_blank" class="project">
+                <img src="clean.jpg" alt="Project 4">
+                <div class="project-details">
+                    <h3>Smart Floor Cleaner Robot Using Android</h3>
+                    <p>This is Project 4. Click to learn more.</p>
+                </div>
+            </a>
+
+            <!-- Project 5 -->
+            <a href="https://nevonprojects.com/joystick-controlled-steering-mechanism-vehicle/" target="_blank" class="project">
+                <img src="joy.jpg" alt="Project 5">
+                <div class="project-details">
+                    <h3>Joystick Controlled Steering Mechanism Vehicle</h3>
+                    <p>This is Project 5. Click to learn more.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <br/>
+    <br/>
+    <div id="events">
+        <h2>Upcoming Robotics Club Events</h2>
+        <br/>
+        <div class="events-container">
+            <div class="events-scroll">
+                <div class="event-item">Workshop on AI & Robotics - January 15, 2024</div>
+                <div class="event-item">Robotics Competition - February 10, 2024</div>
+                <div class="event-item">Robotic Arm Building Workshop - March 5, 2024</div>
+                <div class="event-item">Annual Robotics Expo - April 20, 2024</div>
+                <div class="event-item">Drone Programming Session - May 25, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    
+    <br/>
+    
+    <br/>
+    
+    <br/>
+    <div id="abouts">
+        <h2>ABOUT US</h2>
+        <div class="robotics-info">
+            <!-- Embedded GIF -->
+            <div class="robotics-gif">
+                <img src="giphy.gif" alt="Robotics GIF" />
+            </div>
+            <!-- Text content -->
+            <div class="robotics-text">
+                <h2><u>Our Small Step Would Be a Giant Leap in Robotics Education</u></h2>
+                <p>At the Robotics Club, we firmly believe that every small step we take towards robotics education can have a significant impact on the future of the field. By educating and inspiring the next generation of engineers, we are contributing to the advancement of technology and the growth of innovation. Our workshops, events, and projects aim to equip individuals with the skills and knowledge needed to make a real difference in the world of robotics. We are proud to be a part of this transformative journey, and we believe that every contribution, no matter how small, can lead to a giant leap in the field of robotics education.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="feedback-section">
+        <h2>Feedback Form & Q/A</h2>
+        <!-- Use the action URL provided by Formspree -->
+        <form action="https://formspree.io/f/xovveywk" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="feedback" placeholder="Your Feedback OR any Questions" required></textarea>
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <h5>Done by GG</h5>
+    </footer>
+
+    <script>
+        // Detect when elements are in the viewport and add the 'visible' class
+        window.addEventListener('scroll', function() {
+            const projects = document.querySelectorAll('.project');
+            const windowHeight = window.innerHeight;
+
+            projects.forEach(project => {
+                const position = project.getBoundingClientRect();
+                
+                // If the element is in the viewport (part of it is visible)
+                if (position.top < windowHeight - 50) { 
+                    project.classList.add('visible');
+                } else {
+                    project.classList.remove('visible');
+                }
+            });
+        });
+
+        // Trigger scroll effect when the page loads (in case it's already visible on load)
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                const position = project.getBoundingClientRect();
+                if (position.top < window.innerHeight) {
+                    project.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
